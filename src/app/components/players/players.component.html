@@ -1,0 +1,17 @@
+<h1 style="text-align: center;">MEZZO GIRO PLAYERS</h1>
+<hr>
+
+<div class="card-columns animated fadeIn">
+
+    <div class="card" *ngFor="let player of players">
+        <img [src]=" player.img " class="card-img-top" [alt]="player.name">
+        <div class="card-body">
+            <h4 class="card-title" style="text-align: center;"> {{ player.name | uppercase }} </h4>
+            <p class="card-text" style="text-align: center;"><small class="text-muted">AKA: {{ player.aka }} </small></p>
+            <p class="card-text"> {{ player.description }} </p>
+            <p style="text-align: center;" class="card-text">Nationality: {{ player.nationality }} </p>
+            <!--  <button type="button" class="btn btn-outline-primary btn-block"> Ver estadísticas</button> -->
+        </div>
+    </div>
+
+</div>
