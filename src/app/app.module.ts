@@ -15,6 +15,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { PlayersComponent } from './components/players/players.component';
 import { AboutComponent } from './components/about/about.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,8 @@ import { AboutComponent } from './components/about/about.component';
   ],
   providers: [
     PlayersService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+
   ],
   bootstrap: [AppComponent]
 })
